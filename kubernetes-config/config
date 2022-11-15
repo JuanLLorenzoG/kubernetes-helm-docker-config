@@ -11,7 +11,7 @@ clusters:
     server: https://192.168.58.2:8443
   name: ejercicios
 - cluster:
-    certificate-authority: minikube/ca.crt
+    certificate-authority: ca.crt
     extensions:
     - extension:
         last-update: Tue, 15 Nov 2022 08:29:31 CET
