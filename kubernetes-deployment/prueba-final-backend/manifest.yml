@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prueba-final-app
+  labels:
+    app: prueba-final-app
+    type: back-end
+spec:
+  template:
+    metadata:
+      name: prueba-final-app
+      labels:
+        app: prueba-final
+        type: back-end
+    spec:
+      containers:
+        - name: prueba-final-backend
+          image: "juanllorenzogomis/prueba-final-backend:0.0.1-SNAPSHOT"
+          imagePullPolicy: Always
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prueba-final
+      type: back-end
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: spring-boot-app
+#spec:
+#  selector:
+#    app: spring-boot
+#  type: NodePort
+#  ports:
+#    - protocol: TCP
+#      targetPort: 8082
+#      port: 8082
+#      nodePort: 30001
