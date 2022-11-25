@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prueba-final-app
+  name: practica-final-app
   labels:
-    app: prueba-final-app
+    app: practica-final-app
     type: back-end
 spec:
   template:
     metadata:
-      name: prueba-final-app
+      name: practica-final-app
       labels:
-        app: prueba-final
+        app: practica-final
         type: back-end
     spec:
       containers:
-        - name: prueba-final-backend
-          image: "juanllorenzogomis/prueba-final-backend:0.0.1-SNAPSHOT"
+        - name: practica-final-backend
+          image: "juanllorenzogomis/practica-final-backend:0.0.1-SNAPSHOT"
           imagePullPolicy: Always
   replicas: 1
   selector:
     matchLabels:
-      app: prueba-final
+      app: practica-final
       type: back-end
 #---
 #apiVersion: v1
