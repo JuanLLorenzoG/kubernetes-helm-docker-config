@@ -17,9 +17,6 @@ spec:
         - name: practica-final-backend
           image: "juanllorenzogomis/practica-final-backend:0.0.1-SNAPSHOT"
           imagePullPolicy: Always
-          ports:
-            - containerPort: 8082
-              protocol: TCP
   replicas: 1
   selector:
     matchLabels:
